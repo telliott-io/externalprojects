@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+configMapGenerator:
+- name: speaker-alert
+  files:
+  - image=image.jpg
+  literals:
+  - name=Speaker Alert
+  - description=A speech timing app for iOS
+  - url=https://telliott.io/Speaker-Alert/
+  namespace: projectlist
+generatorOptions:
+  disableNameSuffixHash: true
+  labels:
+    type: generated
+  annotations:
+    note: generated

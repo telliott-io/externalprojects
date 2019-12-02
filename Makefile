@@ -1,2 +1,4 @@
 deploy:
-	kubectl apply -f configmaps
+	kubectl apply -k projects/blog
+	kubectl apply -k projects/gameboy
+	kubectl apply -k projects/speakeralert

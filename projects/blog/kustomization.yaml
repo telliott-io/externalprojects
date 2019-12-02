@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+configMapGenerator:
+- name: blog
+  files:
+  - image=blog.jpg
+  literals:
+  - name=Blog
+  - description=Writings on software development and related topics
+  - url=https://medium.com/average-coder
+  namespace: projectlist
+generatorOptions:
+  disableNameSuffixHash: true
+  labels:
+    type: generated
+  annotations:
+    note: generated
