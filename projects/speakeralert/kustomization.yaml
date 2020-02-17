@@ -7,7 +7,7 @@ configMapGenerator:
   literals:
   - name=Speaker Alert
   - description=A speech timing app for iOS
-  - url=https://telliott.io/Speaker-Alert/
+  - url=https://apps.apple.com/app/apple-store/id488585337
   namespace: projectlist
 generatorOptions:
   disableNameSuffixHash: true
