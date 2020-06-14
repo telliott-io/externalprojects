@@ -1,14 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-configMapGenerator:
-- name: twitter
-  files:
-  - image=twitter.png
-  literals:
-  - name=Twitter
-  - description=Tweets about technology...and puns
-  - url=https://twitter.com/theotherelliott
-  namespace: projectlist
+resources:
+  - project.yaml
 generatorOptions:
   disableNameSuffixHash: true
   labels:

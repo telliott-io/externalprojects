@@ -1,14 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-configMapGenerator:
-- name: github-bulk-unwatch
-  files:
-  - image=eyecon2.png
-  literals:
-  - name=GitHub Bulk Unwatch
-  - description=Unwatch multiple GitHub repositories at once
-  - url=https://github-unwatch.herokuapp.com/Auth/Index
-  namespace: projectlist
+resources:
+  - project.yaml
 generatorOptions:
   disableNameSuffixHash: true
   labels:

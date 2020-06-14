@@ -1,14 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-configMapGenerator:
-- name: github
-  files:
-  - image=Octocat.png
-  literals:
-  - name=GitHub
-  - description=My Profile and Repositories on GitHub
-  - url=https://github.com/theothertomelliott
-  namespace: projectlist
+resources:
+  - project.yaml
 generatorOptions:
   disableNameSuffixHash: true
   labels:

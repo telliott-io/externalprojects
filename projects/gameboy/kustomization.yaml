@@ -1,14 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-configMapGenerator:
-- name: gameboy
-  files:
-  - image=gameboy.jpg
-  literals:
-  - name=Gameboy Emulator
-  - description=A Gameboy emulator implemented in Go
-  - url=https://github.com/theothertomelliott/gameboy
-  namespace: projectlist
+resources:
+  - project.yaml
 generatorOptions:
   disableNameSuffixHash: true
   labels:
